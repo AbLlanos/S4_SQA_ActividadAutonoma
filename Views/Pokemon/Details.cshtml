@@ -8,9 +8,18 @@
 
         <div class="col-md-12">
             <table class="table table-bordered">
-                <tr><th>Altura</th><td>@(Model.Height / 10.0) m</td></tr>
-                <tr><th>Peso</th><td>@(Model.Weight / 10.0) kg</td></tr>
-                <tr><th>Experiencia Base</th><td>@Model.BaseExperience</td></tr>
+                <tr>
+                    <th>Altura</th>
+                    <td>@(Model.Height / 10.0) m</td>
+                    </tr>
+                <tr>
+                    <th>Peso</th>
+                    <td>@(Model.Weight / 10.0) kg</td>
+                </tr>
+                <tr>
+                    <th>Experiencia Base</th>
+                    <td>@Model.BaseExperience</td>
+                </tr>
                 <tr>
                     <th>Tipos</th>
                     <td>
@@ -62,43 +71,43 @@
     <div class="row g-3 justify-content-center">
 
         <div class="col-6 col-md-3 text-center">
-            <div class="card p-2 h-100">
+            <div class="card p-2 h-200">
                 <div style="height:150px; display:flex; align-items:center; justify-content:center;">
                     <img src="@Model.Sprites.FrontDefault"
                          alt="@Model.Name - Sprite de frente Normal"
-                         style="height:200px; width: fit-content; margin:10px;  object-fit:contain">
+                         style="height:170px; width: fit-content; margin:10px;  object-fit:contain">
                 </div>
-                <small class="mt-1 text-capitalize">@Model.Name - Normal</small>
+                <small class="mt-1 text-capitalize">@Model.Name - De frente Normal</small>
             </div>
         </div>
         <div class="col-6 col-md-3 text-center">
-            <div class="card p-2 h-100">
+            <div class="card p-2 h-200">
                 <div style="height:150px; display:flex; align-items:center; justify-content:center;">
                     <img src="@Model.Sprites.FrontShiny"
                          alt="@Model.Name - Sprite de frente Shiny"
-                         style="height:200px; width: fit-content; margin:10px;  object-fit:contain">
+                         style="height:170px; width: fit-content; margin:10px;  object-fit:contain">
                 </div>
-                <small class="mt-1 text-capitalize">@Model.Name - Shiny</small>
+                <small class="mt-1 text-capitalize">@Model.Name - De frente Shiny</small>
             </div>
         </div>
         <div class="col-6 col-md-3 text-center">
-            <div class="card p-2 h-100">
+            <div class="card p-2 h-200">
                 <div style="height:150px; display:flex; align-items:center; justify-content:center;">
                     <img src="@Model.Sprites.BackDefault"
                          alt="@Model.Name - Sprite desde atrás"
-                         style="height:200px; width: fit-content; margin:10px;   object-fit:contain">
+                         style="height:170px; width: fit-content; margin:10px;   object-fit:contain">
                 </div>
-                <small class="mt-1 text-capitalize">@Model.Name - Trasero</small>
+                <small class="mt-1 text-capitalize">@Model.Name - Desde atrás</small>
             </div>
         </div>
         <div class="col-6 col-md-3 text-center">
-            <div class="card p-2 h-100">
+            <div class="card p-2 h-200">
                 <div style="height:150px; display:flex; align-items:center; justify-content:center;">
                     <img src="@Model.Sprites.BackShiny"
                          alt="@Model.Name - Sprite desde atrás Shiny"
-                         style="height:200px; width: fit-content; margin:10px;   object-fit:contain">
+                         style="height:170px; width: fit-content; margin:10px;   object-fit:contain">
                 </div>
-                <small class="mt-1 text-capitalize">@Model.Name - Trasero Shiny</small>
+                <small class="mt-1 text-capitalize">@Model.Name - Desde atrás Shiny</small>
             </div>
         </div>
 
