@@ -17,6 +17,11 @@ namespace ActividadAutonoma_as.Models
         public List<PokemonMoveSlot> Moves { get; set; }
     }
 
+
+    // La PokeAPI devuelve datos anidados (ej: types[].type.name), por eso se crean
+    // clases intermedias que reflejan esa estructura y permiten acceder con t.Type.Name
+
+
     public class PokemonSprites
     {
         // Sprites frontales
@@ -67,13 +72,5 @@ namespace ActividadAutonoma_as.Models
         public string Name { get; set; }
     }
 
-
-    // La PokeAPI devuelve los datos en estructuras anidadas, no como valores directos.
-    // los tipos no llegan como ["grass", "poison"] sino como objetos:
-    // types: [ { type: { name: "grass" } }, { type: { name: "poison" } } ]
-    // Por eso se crean clases intermedias (PokemonTypeSlot, PokemonTypeName, etc.)
-    // que reflejan exactamente esa estructura del JSON.
-    // Esto permite acceder a los datos en la vista usando la notación a.b.Propiedad:
-    // t.Type.Name, s.Stat.Name, a.Ability.Name, m.Move.Name
 
 }
