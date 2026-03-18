@@ -4,20 +4,20 @@
     <h1 class="my-4">Pokédex</h1>
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
-        @foreach (var p in Model.Pokemons)
+        @foreach (var pokemonesTotales in Model.Pokemons)
         {
             <div class="col">
                 <div class="card h-100">
-                    <img src="@p.SpriteUrl"
+                    <img src="@pokemonesTotales.SpriteUrl"
                          class="card-img-top p-2 mx-auto"
-                         alt="@p.Name"
+                         alt="@pokemonesTotales.Name"
                          style="height:200px; object-fit:contain; width:auto">
                     <div class="card-body">
-                        <h6 class="card-title text-capitalize">#@p.Id - @p.Name</h6>
+                        <h6 class="card-title text-capitalize">#@pokemonesTotales.Id - @pokemonesTotales.Name</h6>
                         <a class="btn btn-sm btn-primary"
                            asp-controller="Pokemon"
                            asp-action="Details"
-                           asp-route-id="@p.Name">Ver Detalles</a>
+                           asp-route-id="@pokemonesTotales.Name">Ver Detalles</a>
                     </div>
                 </div>
             </div>
