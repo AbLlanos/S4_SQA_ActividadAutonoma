@@ -1,0 +1,42 @@
+﻿@model ActividadAutonoma_as.Models.PokemonIndexViewModel
+
+<div class="container-fluid text-center">
+    <h1 class="my-4">Pokédex</h1>
+
+    <div class="d-flex flex-wrap justify-content-center gap-4">
+        @foreach (var p in Model.Pokemons)
+        {
+            <div class="card" style="width: 12rem;">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/@(p.Id).png"
+                     class="card-img-top p-2"
+                     alt="@p.Name"
+                     style="height:120px; object-fit:contain">
+                <div class="card-body">
+                    <h6 class="card-title text-capitalize">#@p.Id - @p.Name</h6>
+                    <a class="btn btn-sm btn-primary"
+                       asp-controller="Pokemon"
+                       asp-action="Details"
+                       asp-route-id="@p.Name">Ver Detalles</a>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Paginación -->
+    <div class="mt-4 d-flex justify-content-center gap-3">
+        @if (Model.Offset > 0)
+        {
+            <a class="btn btn-secondary"
+               asp-controller="Pokemon" asp-action="Index"
+               asp-route-offset="@(Model.Offset - Model.Limit)"
+               asp-route-limit="@Model.Limit">← Anterior</a>
+        }
+        @if (Model.Offset + Model.Limit < Model.Total)
+        {
+            <a class="btn btn-secondary"
+               asp-controller="Pokemon" asp-action="Index"
+               asp-route-offset="@(Model.Offset + Model.Limit)"
+               asp-route-limit="@Model.Limit">Siguiente →</a>
+        }
+    </div>
+</div>
