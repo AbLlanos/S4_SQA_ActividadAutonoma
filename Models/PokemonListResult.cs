@@ -17,6 +17,8 @@
         // Se extrae el ID quitando el '/' final, dividiendo por '/' y tomando el último valor.
         public int Id => int.Parse(Url.TrimEnd('/').Split('/').Last());
 
+        public string SpriteUrl => $"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{Id}.png";
+
     }
 
 }
